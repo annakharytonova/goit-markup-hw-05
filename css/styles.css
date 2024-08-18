@@ -571,13 +571,13 @@ button {
 .form-subscribe {
   display: flex;
   align-items: flex-end;
+  gap: 24px;
 }
 
 .label-subscribe {
   padding-right: auto;
   display: flex;
   flex-direction: column;
-  margin-right: 24px;
 }
 
 .input-subscribe {
@@ -585,10 +585,18 @@ button {
   border-radius: 4px;
   width: 264px;
   height: 40px;
-  background-color: #2e2f42;
+  background-color: transparent;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+  padding-left: 16px;
 }
 
+.input-subscribe::placeholder {
+  color: #fff;
+}
 .btn-subscribe {
   display: flex;
   align-items: center;
@@ -597,20 +605,21 @@ button {
   gap: 16px;
   border-radius: 4px;
   padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   background-color: #4d5ae5;
   font-weight: 500;
   font-size: 16px;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
+  border: none;
 }
 
-.footer-input-icon {
-}
 .input-icon {
   fill: #f4f4fd;
+  margin-left: 16px;
 }
 
 /* #endregion footer */
@@ -630,9 +639,8 @@ button {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    pointer-events 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-open {
@@ -667,11 +675,10 @@ button {
   right: 24px;
   width: 24px;
   height: 24px;
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   line-height: o;
   padding: 0;
@@ -684,6 +691,7 @@ button {
 
 .close-icon {
   fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover,
@@ -737,10 +745,11 @@ button {
 .input-model {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+  background-color: transparent;
   width: 360px;
   height: 40px;
   padding-left: 38px;
-  outline: none;
+  outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -755,7 +764,7 @@ button {
 
 .input-model:hover,
 .input-model:focus {
-  border-color: #4d5ae5;
+  fill: #4d5ae5;
 }
 
 .input-model:hover + .modal-icon {
@@ -786,14 +795,12 @@ button {
   resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
-}
-
-.textarea-comment::placeholder {
   font-weight: 400;
   font-size: 12px;
-  line-height: 117%;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
 }
 
 .textarea-comment:hover,
@@ -828,6 +835,11 @@ button {
   justify-content: center;
   align-items: center;
   margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .icon-checkbox {
@@ -841,18 +853,24 @@ button {
 }
 .input-checkbox:checked + .custom-label-checkbox > .custom-checkbox {
   border-color: transparent;
-  background-color: #404bbf;
+  fill: #404bbf;
+  border: none;
 }
 
 .button-send {
   border-radius: 4px;
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: #4d5ae5;
   color: #fff;
   border: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;

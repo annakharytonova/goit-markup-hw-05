@@ -483,25 +483,23 @@
             <label class="label-subscribe">
               <input
                 class="input-subscribe"
-                type="text"
+                type="email"
                 name="subscribe"
                 placeholder="E-mail"
               />
             </label>
             <button class="btn-subscribe" type="submit">
               Subscribe
-              <span class="footer-input-icon">
-                <svg class="input-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-telegram"></use>
-                </svg>
-              </span>
+              <svg class="input-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-telegram"></use>
+              </svg>
             </button>
           </form>
         </div>
       </div>
     </footer>
     <!--#endregion footer-->
-    <div class="backdrop">
+    <div class="backdrop is-open">
       <div class="modal">
         <button class="modal-close-btn" type="button">
           <svg class="close-icon" width="8" height="8">
@@ -557,10 +555,12 @@
             </div>
           </div>
           <div class="div-container-modal-comment">
-            <label class="label-model-comment" for="comment">Comment</label>
+            <label class="label-model-comment" for="user-comment"
+              >Comment</label
+            >
             <textarea
               class="textarea-comment"
-              id="comment"
+              id="user-comment"
               placeholder="Text input"
             ></textarea>
           </div>
@@ -568,11 +568,13 @@
             <input
               class="input-checkbox visually-hidden"
               type="checkbox"
-              id="user-checkbox"
+              id="user-privacy"
+              value="true"
+              name="user-privacy"
             />
-            <label class="custom-label-checkbox" for="user-checkbox">
+            <label class="custom-label-checkbox" for="user-privacy">
               <span class="custom-checkbox">
-                <svg class="icon-checkbox" width="16" height="16">
+                <svg class="icon-checkbox" width="10" height="8">
                   <use href="./images/icons.svg#icon-click"></use>
                 </svg>
               </span>
