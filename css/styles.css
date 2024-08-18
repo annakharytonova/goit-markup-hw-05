@@ -560,17 +560,20 @@ button {
   margin-left: 80px;
 }
 
+.text-subscribe {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
 .form-subscribe {
   display: flex;
   align-items: flex-end;
 }
 
 .label-subscribe {
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #fff;
-  gap: 16px;
   padding-right: auto;
   display: flex;
   flex-direction: column;
@@ -609,6 +612,7 @@ button {
 .input-icon {
   fill: #f4f4fd;
 }
+
 /* #endregion footer */
 
 /* #region backdrop-modal */
